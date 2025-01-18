@@ -1,0 +1,404 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #FFF8E3;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 24%;
+  background: linear-gradient(180deg, #FAA300, #FBA834);
+  color: white;
+}
+.content{
+  margin-left: 24%;
+  
+}
+.icon{
+  min-height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 38px;
+  border-bottom: 1px solid black;
+  width: 90%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+}
+@media screen and (max-width:1130px) {
+  .icon{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr;     */
+  }
+  .icon .thelogo{
+    grid-column: 1 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon .plusbtn, .icon span{
+
+  }
+}
+@media screen and (max-width:730px) {
+  nav{
+    width: 35%;
+  }
+  .content{
+    margin-left: 35%;
+  }
+}
+
+.project{
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  font-size: 20px;
+  word-break: break-all;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid black;
+}
+.projects{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.project > img, .project .Link{
+  /* flex: 1; */
+  padding: 3px 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  /* width: calc(35%/3); */
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+.project .Link.proj{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project .Link{
+  display: flex;
+  align-items: center;
+}
+.project .Link:hover, .project img:hover{
+  background-color: #3D3B40;
+}
+.home{
+  width: 48%;
+  height: 60vh;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 22px;
+  color: rgb(71, 68, 68);
+  text-align: center;
+}
+.home img{
+  height: 55%;
+}
+.Link{
+  text-decoration: none;
+  color: white;
+}
+.projecttodos{
+  width: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5%;
+}
+.projecttodos h1{
+      color: #3D3B40;
+    padding: 10px;
+    font-size: 74px;
+    letter-spacing: 2px;
+}
+.task{
+  background-color: #3D3B40;
+  min-height: 80px;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  box-shadow: 4px 4px 3px gray;
+  padding: 7px 9px 7px 9px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 7px;
+}
+.taskbuttons{
+  display: flex;
+  gap: 7px;
+
+}
+.taskbuttons button:nth-child(1){
+  background-color: red;
+
+}
+.taskbuttons .editbtn{
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.taskbuttons button, .taskbuttons .editbtn{
+  color: white;
+  font-weight: bolder;
+  border: none;
+  padding: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bolder;
+  max-width: 65px;
+  min-width: 30px;
+}
+.taskbuttons button:hover, .taskbuttons .editbtn:hover{
+  opacity: 0.8;
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #FAA300;
+}
+
+/* input:focus + .slider {
+  box-shadow: 0 0 1px #FAA300;
+} */
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.line{
+  text-decoration: line-through;
+  text-decoration-color: #FAA300;
+  opacity: 0.9;
+  text-decoration-thickness: 5px;
+}
+.createtaskform > div, .createprojectform > div{
+      font-size: 74px;
+    letter-spacing: 2px;
+    color: #3D3B40;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.createtaskform, .createprojectform{
+  width: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5%;
+}
+.createtaskform form{
+  height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #3D3B40;
+  border-radius: 10px;
+  box-shadow: 4px 4px 3px gray;
+  padding: 14px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;  
+}
+.createtaskform form input, .createtaskform textarea, .createtaskform form select{
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  padding: 5px 0;
+}
+.createtaskform form input:focus{
+  outline: none;
+}
+.createtaskform form button, .createprojectform form button{
+  background-color: #FAA300;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  border-radius: 18px;
+  font-size: 18px;
+  padding: 6px;
+  cursor: pointer;
+}
+.createtaskform form button:hover, .createprojectform form button:hover{
+  opacity: 0.9;
+}
+.todos{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.createprojectform form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: #3D3B40;
+  border-radius: 10px;
+  box-shadow: 4px 4px 3px gray;
+  padding: 14px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;  
+}
+.createprojectform form label{
+  margin-bottom: 15px;
+}
+.createprojectform input{
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  padding: 5px 3px;
+}
+.showtask{
+  width: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+   background-color: #3D3B40;
+   min-height: 40vh;
+  padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 2px rgb(111, 110, 110);
+    margin-top: 140px;
+  font-size: 22px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+}
+.showtask .lastsection{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ border-top: 2px solid #FAA300;
+ color: white;
+ padding-top: 10px;
+}
+.showtask .tasktitle{
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  border-bottom: 2px solid #FAA300;
+  padding-top: 4px;
+}
+.lastsection div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.showtask p{
+  color: #b4b4b4;
+  font-weight: 300;
+}
+.high{
+  color: rgb(255, 17, 17);
+  border: 2px solid rgb(255, 17, 17);
+
+}
+.medium{
+  color: yellow;
+    border: 2px solid yellow;
+
+}
+.low{
+  color: green;
+  border: 2px solid green;
+}
+.amessage{
+  position: fixed;
+  min-width: 130px;
+  min-height: 70px;
+  background-color: #FAA300;
+  color: white;
+  font-weight: bolder;
+  padding: 6px;
+  font-size: 18px;
+  border-radius: 10px;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 2px 2px 2px #b4b4b4;
+}
+@media screen and (max-width:630px) {
+  .projecttodos{
+    width: 80%;
+  }
+  .createtaskform, .createprojectform{
+    width: 80%;
+  }
+  .showtask{
+    width: 75%;
+  }
+  .projecttodos h1, .createprojectform > div, .createtaskform > div{
+    font-size: 60px;
+    word-wrap: break-word;
+  }
+}
+@media screen and (max-width:430px) {
+  
+}
+.task .Link{
+  display: flex;
+  justify-content: space-between;
+}
+.task .Link .time{
+  font-size: 10px;
+  color: red;
+  border-bottom: 1px solid red;
+}
