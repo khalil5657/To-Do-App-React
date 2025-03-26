@@ -63,7 +63,7 @@ function ShowTodos(){
             <div className="projecttodos">
                 <h1>{projName}</h1>
                 <div className="todos">
-                    {!data[projName]?navigate('/'):data[projName].length>0?data[projName].map((task, index)=>listIt(task, index)):"no data here"}
+                    {!data[projName]?navigate('/'):data[projName].length>0?data[projName].map((task, index)=>listIt(task, index)):<h2>no data here</h2>}
                 </div>
             </div>
         </div>

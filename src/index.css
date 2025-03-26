@@ -12,6 +12,10 @@ nav{
   width: 24%;
   background: linear-gradient(180deg, #FAA300, #FBA834);
   color: white;
+  /* overflow-y: scroll; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .content{
   margin-left: 24%;
@@ -66,6 +70,9 @@ nav{
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow: auto;
+  flex: 1;
+  padding-left: 5px;
 }
 .project > img, .project .Link{
   /* flex: 1; */
@@ -371,9 +378,11 @@ input:checked + .slider:before {
   padding: 6px;
   font-size: 18px;
   border-radius: 10px;
+  border: 1px solid black;
   bottom: 20px;
   right: 20px;
   box-shadow: 2px 2px 2px #b4b4b4;
+  z-index: 99;
 }
 @media screen and (max-width:630px) {
   .projecttodos{
